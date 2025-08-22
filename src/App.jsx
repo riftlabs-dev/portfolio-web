@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div class='container'>
+        <div>
+          {/* <h2>Software and Data Projects</h2> */}
+          <img src="/gif-1.gif" alt="Portfolio" style={{ borderRadius: '8px', width: '100%', maxWidth: '320px' }} />
+          
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Software & Data Analysis</button>
+          <div class="dropdown-content">
+            <a href="/gll.html" target="_blank">1 - Geospatial Landslide Locator</a>
+            <a href="https://philosopher-bot-frontend.vercel.app/" target="_blank">2 - Philosophy Chatbot</a>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
 export default App
+
