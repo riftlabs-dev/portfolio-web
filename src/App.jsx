@@ -15,8 +15,8 @@ function App() {
           <div class="dropdown-content">
             <a href="/gll.html" target="_blank">1 - Geospatial Landslide Locator</a>
             <a href="https://philosopher-bot-frontend.vercel.app/" target="_blank">2 - Philosophy Chatbot</a>
-            <a href="/gll.html" target="_blank">3 - River Toxicity Analysis</a>
-            <a href="/pygbag/index.html" target="_blank">4 - Space Shooter</a>
+            <a href="/pygbag/index.html" target="_blank">3 - Space Shooter</a>
+            <a href="/project5.html" target="_blank">4 - River Toxicity Analysis</a>
           </div>
         </div>
       </div>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Analysis 5</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+            <h2 class="header2">DATA ANALYSIS PROJECT<br>ANALYSIS OF RIVER TOXICITY LEVELS</h2>
+
+            <h3>SUMMARY</h3>
+            <p class="project-text">                
+                This data project explores the varying concentrations of toxins found in the Amazon, Danube, Mississippi, Nile and Yangtze rivers from 2018 to 2022. <br><br>
+
+                <u>Key Insights</u>:<br>
+                1. Yangtze river contains the highest concentrations of lead, mercury and arsenic of all five rivers.<br>
+                2. Danube river contains the lowest concentrations of mercury and arsenic of all five rivers.<br>
+                3. Strong positive correlation found between water pH level and nitrate concentration, with statistically signifant result.<br>
+                4. T-test for lead concentrations observed between the Yangtze and Nile rivers returned as statistically significant.<br><br>
+
+                An interactive web application was designed using Plotly Express which allows scientists to explore toxicity data for the world's largest water systems.<br>
+                All plots include both a slide bar for specifying the date range and a legend which can be selected to filter data for different rivers.<br><br>
+
+                Follow the links below to examine concentrations of:<br>
+                    LEAD / MERCURY - <a href="lead_mercury.html">link</a><br>
+                    NITRATES / PHOSPHATES - <a href="nitrate_phosphate.html">link</a><br>
+                    ARSENIC - <a href="arsenic.html">link</a><br><br>
+            </p>
+            <p></p>
+
+            <h3>CHALLENGES</h3>
+            <p class="project-text">
+                
+                <u>missing values</u>:<br>
+                - a small number of measurements were missing from the dataset, which needed replacing in order to calculate a column average. <br>
+                - I decided to use the interpolate() method to approximate the values using measurements either side.<br><br>
+
+                <u>plotly</u>:<br>
+                - using plotly I wanted to add a slider which would dynamically change the range of data displayed, as opposed to a static filter where you select from a list of years.<br>
+                - I decided to include the 'rangeslider' functionality for the x-axis in plotly express, which treats its type as 'date'.<br><br>
+            </p>
+            <p></p>
+            
+            <h3>TECHNIQUES</h3>
+            <p class="project-text">
+
+                <u>plotly</u>:<br>
+                - plot measurements for multiple toxins in each river system (px.line(y=[df.Lead,df.Mercury]))<br>
+                - save figure to html file (fig.write_html())<br><br>
+
+                <u>seaborn</u>:<br>
+                - create bar charts comparing toxin concentrations in each river (sns.barplot(df))<br>
+                - change bar colours depending on x-axis variables (hue="River")<br><br>
+
+                <u>scipy</u>:<br>
+                - build a t-test module for independent testing between two samples (stats.ttest_ind()) <br>
+                - form null / alternative hypotheses and test significance (if p_value < 0.05: "reject null hypothesis")<br><br>
+            </p>
+            <p></p>
+
+            <h3>EXTENSIONS</h3>
+            <p class="project-text">
+                The project could be extended to include:<br>
+                - an impact assessment of the effects of toxin level on aquatic life and human health.<br>
+                - a root cause analysis of the variations in toxin levels and how river waste can be managed.<br>
+            </p>
+            <p></p>
+
+            <h3>SOURCES</h3>
+            <p class="project-text">
+                Data Analysis Course: <u>https://www.itonlinelearning-academy.com/courses/new-course-5</u><br>
+            </p>
+            <p></p>
+
+            <h3>VISUALISATIONS</h3>
+            <p><u>Toxicity Levels</u>:<br>
+                <div class="image-container">
+                    <img src="/project 5/lead_avg.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/mercury_avg.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/nitrates_avg.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/phosphates_avg.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/arsenic_avg.png" height=350 width=450/><br>
+                </div>
+            </p>
+            <p></p>
+
+            <p><u>pH Level</u>:<br>
+                <div class="image-container">
+                    <img src="/project 5/pH_levels_avg.png" height=350 width=450/><br>
+                </div>
+            </p>
+            <p></p>
+
+            <p><u>pH Level vs. Toxicity</u>:<br>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_lead.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_mercury.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_arsenic.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_nitrate.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_phosphate.png" height=350 width=450/><br>
+                </div>
+            </p>
+            <p></p>
+
+            <p><u>Temperature / Oxygen Levels</u>:<br>
+                <div class="image-container">
+                    <img src="/project 5/temp_avg.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/oxygen_avg.png" height=350 width=450/><br>
+                </div>
+            </p>
+            <p></p>
+
+            <p><u>pH Level vs. Temperature / Oxygen</u>:<br>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_temp.png" height=350 width=450/><br>
+                </div>
+                <div class="image-container">
+                    <img src="/project 5/pH_vs_oxygen.png" height=350 width=450/><br>
+                </div>
+            </p>
+            <p></p>
+            <a href="index.html"><p>BACK</p></a>
+        </div>
+    </body>
+
+    <footer>
+        <p>© 2024 Jed Cooper</p>
+    </footer>
+</html>
+ 
