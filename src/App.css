@@ -2,16 +2,28 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 1rem;
-  text-align: center;
+  text-align: left;
+}
+
+.section-1 {
+  background-color: #212121;
+  color: #F4F4F4;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  max-width: 100%;
+  border-radius: 10px;
+  white-space: pre-line;
 }
 
 .dropbtn {
-  background-color: #4f6666;
-  color: white;
+  background-color: #2E2E2E;
+  color: #F4F4F4;
   padding: 16px;
-  font-size: 24px;
-  border-radius: 0px;
+  font-size: 18px;
+  border-radius: 10px;
   width: 100%;
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
 .dropdown {
@@ -21,34 +33,50 @@
 
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  position: relative;
+  background-color: transparent;
+  min-width: 300px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  color: #F4F4F4;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: black;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: flex;}
 
-.dropdown:hover .dropbtn {background-color: #acfc5c;}
+.dropdown:hover .dropbtn {background-color: black; border-radius: 0px;}
 
 .fade-in {
   opacity: 0;
   animation: fadeIn 2s forwards;
+  
 }
 
 @keyframes fadeIn {
   to {
     opacity: 1;
   }
+}
+
+.icon {
+  color: white;
+}
+
+.image-preview {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 10px;
+
 }
